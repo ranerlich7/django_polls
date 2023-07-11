@@ -1,11 +1,16 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 from polls.models import Choice, Question
 
 
+# def index(request):
+#     first_question = Question.objects.all()[0]
+#     return HttpResponse(f"Hello, Ran! You're at the polls index.\n Thess are the questions:\n{first_question}")
 def index(request):
-    first_question = Question.objects.all()[0]
-    return HttpResponse(f"Hello, Ran! You're at the polls index.\n Thess are the questions:\n{first_question}")
+    latest_question_list = Question.objects.all()
+    context = {"latest_question_list": latest_question_list}
+    return render(request, "polls/index.html", context)
 
 def create(request):
     

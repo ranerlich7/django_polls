@@ -19,7 +19,7 @@ from django.urls import include, path
 
 #  THIS IS THE PROJECT LEVEL URLS. ONE TIME FOR EACH APP
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('ran/', admin.site.urls),
     path("polls/", include("polls.urls")),
 
 ]
