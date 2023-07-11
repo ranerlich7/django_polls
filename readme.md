@@ -6,3 +6,11 @@
 5. python -m venv venv
 6. ./venv/Scripts/activate
 7. pip install -r requirements.txt
+8. python manage.py migrate
+
+# create a superuser
+python manage.py createsuperuser
+
+# run server
+python manage.py runserver
+
